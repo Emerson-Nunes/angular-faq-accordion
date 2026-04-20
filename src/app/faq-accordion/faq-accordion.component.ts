@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { faqAccordionAnimations } from './faq-accordion.animations';
 
 @Component({
   selector: 'app-faq-accordion',
   imports: [CommonModule],
   templateUrl: './faq-accordion.component.html',
-  styleUrl: './faq-accordion.component.scss'
+  styleUrl: './faq-accordion.component.scss',
+  animations: [faqAccordionAnimations.slideToggle],
 })
 export class FaqAccordionComponent {
   openedIndex: number | null = null;
@@ -13,15 +15,18 @@ export class FaqAccordionComponent {
   faqs = [
     {
       question: 'What is Angular?',
-      answer: 'Angular is a platform for building mobile and desktop web applications.',
+      answer:
+        'Angular is a platform for building mobile and desktop web applications.',
     },
     {
       question: 'What is a component in Angular?',
-      answer: 'A component controls a patch of the screen called a view. Components are the main build block of Angular applications.',
+      answer:
+        'A component controls a patch of the screen called a view. Components are the main build block of Angular applications.',
     },
     {
       question: 'What are Angular directives?',
-      answer: 'Directives are instructions in the DOM. Angular directives allow you to attach behavior to elements in the DOM.',
+      answer:
+        'Directives are instructions in the DOM. Angular directives allow you to attach behavior to elements in the DOM.',
     },
   ];
 
