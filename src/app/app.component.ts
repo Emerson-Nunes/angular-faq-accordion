@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FaqAccordionComponent } from './faq-accordion/faq-accordion.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [FaqAccordionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
